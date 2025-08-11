@@ -1,0 +1,14 @@
+artifact_uri: file:///H:/DS/top-5/customer-churn-prediction/mlruns/597575709404657529/16850827f76e43fdbf40a32c2e743248/artifacts
+end_time: 1754911294798
+entry_point_name: ''
+experiment_id: '597575709404657529'
+lifecycle_stage: active
+run_id: 16850827f76e43fdbf40a32c2e743248
+run_name: train
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754911292317
+status: 3
+tags: []
+user_id: User

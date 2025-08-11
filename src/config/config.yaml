@@ -1,0 +1,44 @@
+paths:
+  raw_data: data/internet_service_churn.csv
+  train_csv: data/internet_service_churn_train.csv
+  test_csv: data/internet_service_churn_test.csv
+  saved_dir: saved
+  model_path: saved/model/model.pkl
+  transformer_path: saved/transformer/transformer.pkl
+  scaler_path: saved/scaler/scaler.pkl
+
+features:
+  target: churn
+  id_column: id
+  numeric_cols: [subscription_age, bill_avg, reamining_contract, download_avg, upload_avg]
+  binary_cols: [is_tv_subscriber, is_movie_package_subscriber, download_over_limit]
+  integer_cols: [service_failure_count]
+  # Columns to scale/transform
+  skewed_cols: [subscription_age, bill_avg, reamining_contract, download_avg, upload_avg]
+
+training:
+  random_state: 42
+  test_size: 0.1
+  cv_folds: 5
+  use_optuna: true
+  optuna_trials: 50
+  model: xgboost
+  xgboost_params:
+    n_estimators: 484
+    max_depth: 12
+    learning_rate: 0.16403791656976083
+    subsample: 0.909554066727578
+    colsample_bytree: 0.8582517173650213
+    gamma: 1.0288137593727664
+    min_child_weight: 1
+    reg_alpha: 0.7741418269502938
+    reg_lambda: 3.3779376208368834
+
+mlflow:
+  experiment_name: churn-pred-exp
+  tracking_uri: ${oc.env:MLFLOW_TRACKING_URI, "http://localhost:5000"}
+
+ui:
+  default_threshold: 0.5
+
+

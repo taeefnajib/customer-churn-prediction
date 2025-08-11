@@ -1,0 +1,14 @@
+artifact_uri: file:///H:/DS/top-5/customer-churn-prediction/mlruns/597575709404657529/912155d70dfd47b8956106df78fd7950/artifacts
+end_time: 1754911446006
+entry_point_name: ''
+experiment_id: '597575709404657529'
+lifecycle_stage: active
+run_id: 912155d70dfd47b8956106df78fd7950
+run_name: evaluate
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754911445943
+status: 3
+tags: []
+user_id: User

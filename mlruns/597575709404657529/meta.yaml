@@ -1,0 +1,6 @@
+artifact_location: file:///H:/DS/top-5/customer-churn-prediction/mlruns/597575709404657529
+creation_time: 1754911291098
+experiment_id: '597575709404657529'
+last_update_time: 1754911291098
+lifecycle_stage: active
+name: churn-pred-exp
