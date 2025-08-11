@@ -6,5 +6,6 @@ venv/
 .env
 mlflow/
 *.log
+venv/
 
 
