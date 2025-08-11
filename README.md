@@ -10,6 +10,8 @@ This repository contains a modular, production-ready project converted from the 
 ## Dataset
 The dataset used in this project is the [Internet Service Churn](https://www.kaggle.com/datasets/mehmetsabrikunt/internet-service-churn) dataset from Kaggle. It contains customer records from an internet service provider, with the goal of predicting whether a customer will churn (i.e., leave the service).
 
+![Kaggle Screenshot](img/kaggle.png)
+
 **Key features include:**
 - `is_tv_subscriber`: Whether the customer subscribes to TV services
 - `is_movie_package_subscriber`: Whether the customer subscribes to a movie package
@@ -33,7 +35,9 @@ For more details and to download the dataset, visit the [Kaggle page](https://ww
 ├── app/
 │   └── gradio_app.py
 ├── data/
-│   └── internet_service_churn.csv  # existing
+│   ├── internet_service_churn.csv  # original
+│   ├── internet_service_churn_train.csv
+│   └── internet_service_churn_test.csv
 ├── saved/                          # models and transformers will be saved here
 ├── src/
 │   ├── config/
@@ -61,7 +65,7 @@ For more details and to download the dataset, visit the [Kaggle page](https://ww
 
 ## Quickstart
 
-1) Install dependencies
+1) Create a virtual environment and install dependencies
 
 ```
 pip install -r requirements.txt
@@ -103,6 +107,8 @@ All configuration lives in `src/config/config.yaml`. Override values by editing 
 - Artifact root: `./mlflow/artifacts`
 - Default experiment: `churn-pred-exp`
 
+![MLflow UI Screenshot](img/mlflow.png)
+
 ## Gradio UI
 
 The Gradio UI provides an interactive web interface for making predictions and exploring the model. It allows you to:
@@ -112,6 +118,7 @@ The Gradio UI provides an interactive web interface for making predictions and e
 - Adjust the decision threshold (including a suggested threshold based on Youden's J statistic).
 - (Optionally) Provide the actual churn label to compare predictions.
 
+![Gradui UI Screenshot](img/gradio.png)
 
 This project uses Docker only to run MLflow locally. The application (training, evaluation, and Gradio UI) runs on your host Python environment.
 
